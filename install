@@ -1,0 +1,58 @@
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
+#Java & JRE Environment Variable
+
+JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
+JRE_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre/"
+
+MAVEN_HOME="/usr/share/maven/"
+M2=$MAVEN_HOME/bin
+
+
+sudo apt update
+sudo apt list --upgradable
+sudo apt install vim curl unzip wget elinks
+
+java -version
+sudo apt install openjdk-8-jre-headless
+   15  ls -lrt /usr/lib/jvm/java-8-openjdk-amd64/
+   16  java -version
+   17  ls -lrt /usr/lib/jvm/java-8-openjdk-amd64/jre/
+   18  echo $JAVA_HOME
+   19  echo $JRE_HOME
+
+52  sudo apt list --upgradable
+   53  sudo apt install maven
+   54  sudo vi /etc/environment
+   55  source /etc/environment
+   56  echo $M2
+   57  echo $MAVEN_HOME
+
+
+ pwd
+   53  wget http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.43/bin/apache-tomcat-8.5.43.tar.gz
+   54  ls -lrt
+   55  tar -xvzf apache-tomcat-8.5.43.tar.gz
+   56  pwd
+   57  ls -lrt
+   58  mv apache-tomcat-8.5.43 tomcat
+   59  ls -lrt
+   60  cd tomcat/
+   61  ls -lrt
+   62  pwd ..
+   63  ls -lrt
+   64  cd ..
+   65  pwd
+   66  ls -lrt
+   67  mv tomcat /opt
+   68  ls -lrt /opt
+   69  cd /opt/tomcat/
+ cd bin
+   81  ls -lrt
+   82  ./startup.sh 
+   83  ps -aux | grep tomcat
+202  apt-get install openjdk-8-jdk
+  203  mvn -e clean package
+  204  hostnamectl set-hostname "tomcat.vs.com"
+  205  /bin/bash
+  223  cd /opt
